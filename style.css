@@ -919,8 +919,6 @@ section h2::after {
 .portfolio {
     background: #ffffff;
     margin: 0;
-    height: 1500px;         /* Set total fixed height */
-    max-height: 1500px;
 }
 
 /* Carousel Controls */
@@ -1861,6 +1859,7 @@ footer i {
         font-size: 4rem;
     }
 }
+
 
 
 
