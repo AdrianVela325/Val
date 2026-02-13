@@ -8,43 +8,39 @@ let pictureFiles = [];
 // Function to load pictures from /pictures folder
 async function loadPicturesFromFolder() {
     try {
-        // Use PHP endpoint to get list of pictures
-        const response = await fetch('list_pictures.php');
-        
-        if (response.ok) {
-            const data = await response.json();
-            if (data.success && data.images && data.images.length > 0) {
-                pictureFiles = data.images;
-                console.log(`Loaded ${pictureFiles.length} pictures from pictures folder`);
-                populateCarousel();
-                return;
-            }
-        }
-        
-        console.warn('Failed to load pictures from PHP endpoint, trying directory listing...');
-        
-        // Fallback: Try directory listing to get actual files
-        const response2 = await fetch('pictures/');
-        if (response2.ok) {
-            const html = await response2.text();
-            // Parse directory listing (simple approach)
-            const links = html.match(/href="([^"]*\.(jpg|jpeg|png|gif|webp|JPG|JPEG|PNG|GIF|WEBP))"/gi);
-            if (links) {
-                pictureFiles = links.map(link => {
-                    const filename = link.replace(/href="|"/g, '');
-                    return {
-                        url: 'pictures/' + filename,
-                        title: filename.replace(/\.[^/.]+$/, '').replace(/_/g, ' '),
-                        description: 'Memory from our moments together ❤️'
-                    };
-                });
-                console.log(`Loaded ${pictureFiles.length} pictures from directory listing`);
-                populateCarousel();
-                return;
-            }
-        }
-        
-        console.error('No pictures found in pictures folder');
+        // Hardcoded list of pictures for fully static site
+        const pictures = [
+            'IMG_20251223_013835_689.jpg',
+            'IMG_20251223_200701_449.jpg',
+            'IMG_20251223_202108_512.jpg',
+            'IMG_20251223_205636_196.jpg',
+            'IMG_20251224_110309_273.jpg',
+            'IMG_20251224_110325_093.jpg',
+            'IMG_20251224_110803_996.jpg',
+            'IMG_20251224_182426_026.jpg',
+            'IMG_20251224_183914_820.jpg',
+            'IMG_20251225_154548_6.jpg',
+            'IMG_20251225_165547_295.jpg',
+            'IMG_20251225_170107_717.jpg',
+            'IMG_20251225_174359_374.jpg',
+            'IMG_20251225_203422_057.jpg',
+            'IMG_20251225_203521_774.jpg',
+            'IMG_20251226_141256_769.jpg',
+            'IMG_20251226_143052_472.jpg',
+            'IMG_20251226_165733_4.jpg',
+            'IMG_20251228_050406_271.jpg',
+            'IMG_20251228_062809_819.jpg'
+        ];
+
+        // Create picture objects
+        pictureFiles = pictures.map(pic => ({
+            url: 'pictures/' + pic,
+            title: pic.replace('.jpg', '').replace(/_/g, ' '),
+            description: 'Memory from our moments together ❤️'
+        }));
+
+        console.log(`Loaded ${pictureFiles.length} pictures from hardcoded list`);
+        populateCarousel();
         
     } catch (error) {
         console.error('Error loading pictures:', error);
