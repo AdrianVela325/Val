@@ -892,7 +892,7 @@ section h2::after {
     .letter-content {
         padding: 1rem 1.8rem;
         padding-top: 0.5rem;
-        margin-top: 1rem;
+        margin-top: 0.8rem;
         overflow-y: auto;
         max-height: calc(100% - 20px);
     }
@@ -1859,3 +1859,4 @@ footer i {
         font-size: 4rem;
     }
 }
+
