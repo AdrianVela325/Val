@@ -919,13 +919,8 @@ section h2::after {
 .portfolio {
     background: #ffffff;
     margin: 0;
-    height: 650px;         /* Set total fixed height */
+    height: 700px;         /* Set total fixed height */
     max-height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertically center the carousel */
-    overflow: hidden;        /* remove extra space */
-    position: relative;
 }
 
 /* Carousel Controls */
@@ -1866,6 +1861,7 @@ footer i {
         font-size: 4rem;
     }
 }
+
 
 
 
