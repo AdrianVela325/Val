@@ -919,8 +919,8 @@ section h2::after {
 .portfolio {
     background: #ffffff;
     margin: 0;
-    height: 600px;         /* Set total fixed height */
-    max-height: 700px;
+    height: 650px;         /* Set total fixed height */
+    max-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center; /* vertically center the carousel */
@@ -1866,6 +1866,7 @@ footer i {
         font-size: 4rem;
     }
 }
+
 
 
 
