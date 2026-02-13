@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Portfolio - Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Heart Background -->
+    <div class="heart-background"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop autoplay muted preload="auto">
+        <source src="music/background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-toggle" title="Toggle Music">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Happy Valentine's Day</h1>
+            <div class="hero-hearts">
+                <span class="heart">❤️</span>
+                <span class="heart">💕</span>
+                <span class="heart">💖</span>
+            </div>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
+        <div class="hero-background">
+            <div class="floating-heart">❤️</div>
+            <div class="floating-heart">💕</div>
+            <div class="floating-heart">💖</div>
+        </div>
+    </section>
+
+    <!-- About Section - Love Letter Envelope -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Happy Valentine's Day, Baby ❤️</h2>
+            <p class="envelope-instruction">Tap the envelope to open your letter 💌</p>
+            
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <!-- Envelope Front -->
+                    <div class="envelope-front">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <p class="envelope-text">💌 For You 💌</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Letter Inside -->
+                    <div class="letter">
+                        <div class="letter-content">
+                            <p>I don't know how it's possible to miss someone this much and still feel this excited at the same time — but that's exactly what you do to me.</p>
+
+                            <p>I miss you in the quiet moments, in the little things, in the instinct to reach for your hand and remember you're not right here (yet). But that "yet" is what keeps me smiling. Because soon, I'll get to see you. Soon, I'll get to hold you, to hear your laugh in person, to look into your eyes instead of at a screen.</p>
+
+                            <p>The closer that day gets, the more my heart starts counting down. I already know I'm going to hug you a little tighter and smile like I just won the lottery.</p>
+
+                            <p>And when I finally do see you? I already know I'm going to look at you like it's the first time all over again. I'm going to hug you a little tighter, hold you a little longer, and probably smile like an idiot because I'll finally have my favorite person right there in front of me.</p>
+
+                            <p>You're worth every second of waiting.</p>
+
+                            <p>So this Valentine's Day, just know: my heart is yours — impatient, excited, and completely in love.</p>
+
+                            <p class="countdown"><strong>Counting down the days until I'm with you again ❤️</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Memories Together</h2>
+            
+            <!-- Carousel Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-btn carousel-prev" id="prevBtn" title="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-mode">
+                    <label class="mode-toggle">
+                        <input type="checkbox" id="autoPlayToggle" checked>
+                        <span class="toggle-label">&nbsp&nbspAuto Play</span>
+                    </label>
+                </div>
+                
+                <button class="carousel-btn carousel-next" id="nextBtn" title="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Card Flip Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-frame" id="carouselFrame">
+                    <!-- Carousel cards will be loaded by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <!-- Indicators will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Valentine's Day Portfolio. Made with <i class="fas fa-heart"></i> for you.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
